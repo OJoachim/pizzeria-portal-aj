@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import styles from './Event.module.scss';
+import styles from './Event.module.scss';
 
 const Event = (eventId) => (
-  <div /*className={styles.component}*/>
+  <div className={styles.component}>
     <h2>Event view</h2>
     {eventId}
   </div>

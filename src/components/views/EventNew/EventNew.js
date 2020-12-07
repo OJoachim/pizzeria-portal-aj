@@ -1,8 +1,8 @@
 import React from 'react';
-//import styles from './EventNew.module.scss';
+import styles from './EventNew.module.scss';
 
 const EventNew = () => (
-  <div /*className={styles.component}*/>
+  <div className={styles.component}>
     <h2>EventNew view</h2>
   </div>
 );

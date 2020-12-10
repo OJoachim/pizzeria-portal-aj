@@ -2,4 +2,34 @@
 
 .component {
   padding: $base-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  background: $color-one;
+  margin-top: $margin;
+}
+
+.kitchenview {
+  color: $color-one;
+  margin-top: $base-size;
+  margin-bottom: $base-size;
+}
+
+.subtitle {
+  text-decoration: underline;
+  margin-top: $margin;
+}
+
+.table {
+  max-width: 600px;
+  margin-top: $small-margin;
+  .tablehead {
+    background-color: $color-one;
+    .titletable {
+      color: $color-two;
+    }
+  }
 }

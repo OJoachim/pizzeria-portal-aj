@@ -3,3 +3,24 @@
 .component {
   padding: $base-size;
 }
+
+.title {
+  text-transform: uppercase;
+  margin-bottom: $margin;
+}
+
+.subtitle {
+  text-decoration: underline;
+  color: $color-one;
+  margin-top: $base-margin;
+}
+.table {
+  margin-top: $small-margin;
+  max-width: 400px;
+  .tablehead {
+    background-color: $color-one;
+    .titletable {
+      color: $color-two;
+    }
+  }
+}

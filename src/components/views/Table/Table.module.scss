@@ -2,4 +2,26 @@
 
 .component {
   padding: $base-size;
+  margin-top: $margin;
+}
+
+.tabview {
+  color: $color-one;
+  margin-top: $base-size;
+  margin-bottom: $base-margin;
+}
+
+.table {
+  margin-top: $base-size;
+  min-width: 700px;
+  .tablehead {
+    background-color: $color-one;
+    .title {
+      color: $color-two;
+    }
+  }
+}
+
+.buttons{
+  margin-bottom: $base-size;
 }

@@ -17,10 +17,6 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
-
-
-
-
 const OrderNew = () => {
   
   const [table, setTable] = React.useState('');
@@ -61,7 +57,7 @@ const OrderNew = () => {
         Add new order
       </Typography>
       <form className={styles.form} noValidate>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <TextField className={styles.textField}
             variant="outlined"
             fullWidth
@@ -73,8 +69,6 @@ const OrderNew = () => {
             autoFocus
             size="small"
           />
-        </Grid>
-        <Grid item xs={6}>
           <FormControl size="small" margin="normal" variant="outlined" >
             <InputLabel id="demo-simple-select-outlined-label">Table</InputLabel>
             <Select className={styles.select}
@@ -172,7 +166,7 @@ const OrderNew = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Button type="submit" fullWidth variant="contained" color="primary" component={Link} to={`${process.env.PUBLIC_URL}/waiter`}>
+        <Button className={styles.orderbtn} type="submit" fullWidth variant="contained" color="primary" component={Link} to={`${process.env.PUBLIC_URL}/waiter`}>
           Add order
         </Button>
       </form>

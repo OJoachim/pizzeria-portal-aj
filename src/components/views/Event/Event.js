@@ -11,16 +11,19 @@ import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
 const customData =
   {
-    date: '2020-12-23',
-    hour: '18:00',
+    id: '122',
+    date: '2020-12-24',
+    hour: '14:00',
     table: '3',
     duration: '4',
     ppl: '6',
-    starters: ['water'],
+    starters: ['water', 'bread'],
     phone: '888888888',
     mail: 'test@onet.pl',
   };
@@ -40,44 +43,77 @@ const Event = ({eventId}) => {
           <TableHead>
             <TableRow className={styles.tablehead}>
               <TableCell className={styles.title}>Event id</TableCell>
-              <TableCell className={styles.title}>{eventId}</TableCell>
+              <TableCell className={styles.title}>{customData.id}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>date</TableCell>
-              <TableCell>{customData.date}</TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" label="date" disabled="date" />
+              </TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" id="date" label={customData.date} />
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>hour</TableCell>
-              <TableCell>{customData.hour}</TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" label="hour" disabled="hour" />
+              </TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" id="hour" label={customData.hour} />
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>table</TableCell>
-              <TableCell>{customData.table}</TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" label="table" disabled="table" />
+              </TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" id="table" label={customData.table} />
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>duration</TableCell>
-              <TableCell>{customData.duration}</TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" label="duration" disabled="duration" />
+              </TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" id="duration" label={customData.duration} />
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>people</TableCell>
-              <TableCell>{customData.ppl}</TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" label="people" disabled="people" />
+              </TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" id="people" label={customData.ppl} />
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>starters</TableCell>
-              <TableCell>{customData.starters}</TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" label="starters" disabled="starters" />
+              </TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" id="starters" label={customData.starters} />
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>phone</TableCell>
-              <TableCell>{customData.phone}</TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" label="phone" disabled="phone" />
+              </TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" id="phone" label={customData.phone} />
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>e-mail</TableCell>
-              <TableCell>{customData.mail}</TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" label="e-mail" disabled="e-mail" />
+              </TableCell>
+              <TableCell>
+                <TextField fullWidth margin="normal" id="mail" label={customData.mail} />
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>
+        <Button type="submit" fullWidth variant="contained" color="primary" component={Link} to={`${process.env.PUBLIC_URL}/tables/`}>edit & submitt</Button>
       </TableContainer>
     </Paper>
   );

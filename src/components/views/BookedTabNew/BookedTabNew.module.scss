@@ -2,4 +2,47 @@
 
 .component {
   padding: $base-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  background: $color-one;
+  margin-top: $base-margin;
+}
+
+.bookingview {
+  color: $color-one;
+  margin-top: $base-size;
+  margin-bottom: $base-margin;
+}
+
+.form {
+  border: 1px dotted $color-one;
+  border-radius: $base-size;
+  padding: $base-size $base-margin;
+}
+
+.dateform {
+  margin-top: $base-size;
+  margin-bottom: $base-margin;
+}
+
+.textField {
+  width: 120px;
+  margin-bottom: $base-margin;
+  margin-right: $small-margin;
+}
+
+.select {
+  min-width: 120px;
+}
+
+.starters {
+  margin-bottom: $base-size;
+}
+
+.addbtn {
+  margin-bottom: $base-margin;
 }

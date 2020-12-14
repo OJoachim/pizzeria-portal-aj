@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/views/Home/Home';
 import Login from './components/views/Login/Login';
 import Waiter from './components/views/Waiter/Waiter';
-import Table from './components/views/Table/Table';
+import Tables from './components/views/Tables/Tables';
 import Kitchen from './components/views/Kitchen/Kitchen';
 import Order from './components/views/Order/Order';
 import OrderNew from './components/views/OrderNew/OrderNew';
@@ -27,7 +27,7 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <BrowserRouter basename={'/panel'}>
+    <BrowserRouter basename={'/'}>
       <StylesProvider injectFirst>
         <ThemeProvider theme={theme}>
           <MainLayout>
@@ -37,11 +37,11 @@ function App() {
               <Route exact path={process.env.PUBLIC_URL + '/waiter'} component={Waiter} />
               <Route exact path={`${process.env.PUBLIC_URL}/waiter/order/new`} component={OrderNew} />
               <Route exact path={`${process.env.PUBLIC_URL}/waiter/order/:orderId`} component={Order} />
-              <Route exact path={process.env.PUBLIC_URL + '/table'} component={Table} />
-              <Route exact path={`${process.env.PUBLIC_URL}/table/event/new`} component={EventNew} />
-              <Route exact path={`${process.env.PUBLIC_URL}/table/event/:eventId`} component={Event} />
-              <Route exact path={`${process.env.PUBLIC_URL}/table/booking/new`} component={BookedTabNew} />
-              <Route exact path={`${process.env.PUBLIC_URL}/table/booking/:tableId`} component={BookedTab} />
+              <Route exact path={process.env.PUBLIC_URL + '/tables'} component={Tables} />
+              <Route exact path={`${process.env.PUBLIC_URL}/tables/event/new`} component={EventNew} />
+              <Route exact path={`${process.env.PUBLIC_URL}/tables/event/:eventId`} component={Event} />
+              <Route exact path={`${process.env.PUBLIC_URL}/tables/booking/new`} component={BookedTabNew} />
+              <Route exact path={`${process.env.PUBLIC_URL}/tables/booking/:tableId`} component={BookedTab} />
               <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
             </Switch>
           </MainLayout>

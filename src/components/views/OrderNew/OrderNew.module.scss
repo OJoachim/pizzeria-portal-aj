@@ -18,9 +18,16 @@
   margin-bottom: $base-margin;
 }
 
+.form {
+  border: 1px dotted $color-one;
+  border-radius: $base-size;
+  padding: $base-size $base-margin;
+}
+
 .textField {
   width: 100px;
-  margin-bottom: $base-size;
+  margin-bottom: $base-margin;
+  margin-right: $small-margin;
 }
 
 .select {
@@ -30,5 +37,9 @@
 
 .formgroup {
   padding-right: $base-margin;
+  margin-bottom: $base-margin;
+}
+
+.orderbtn {
   margin-bottom: $base-size;
 }

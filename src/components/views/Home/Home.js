@@ -57,7 +57,7 @@ const Home = () => (
               <TableRow key={row.table}>
                 <TableCell component="th" scope="row">
                   {row.event && (
-                    <Button component={Link} to={`${process.env.PUBLIC_URL}/table/event/${row.event}`}>
+                    <Button component={Link} to={`${process.env.PUBLIC_URL}/tables/event/${row.event}`}>
                       {row.event}
                     </Button>
                   )}
@@ -80,7 +80,7 @@ const Home = () => (
               <TableRow key={row.table}>
                 <TableCell component="th" scope="row">
                   {row.reservation && (
-                    <Button component={Link} to={`${process.env.PUBLIC_URL}/table/booking/${row.reservation}`}>
+                    <Button component={Link} to={`${process.env.PUBLIC_URL}/tables/booking/${row.reservation}`}>
                       {row.reservation}
                     </Button>
                   )}

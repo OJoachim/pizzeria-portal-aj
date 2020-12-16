@@ -12,19 +12,33 @@
   margin-top: $base-margin;
 }
 
-.tabview {
-  color: $color-one;
-  margin-top: $base-size;
+.booksub {
+  text-align: right;
+  margin-bottom: $small-margin;
+  font-size: 80%;
 }
 
-.table {
-  margin-top: $base-size;
-  max-width: 400px;
+.grid {
+  margin: $base-margin;
+}
 
-  .tablehead {
-    background-color: $color-one;
-    .title {
-      color: $color-two;
-    }
-  }
+.form {
+  border: 1px dotted $color-one;
+  border-radius: $base-size;
+  padding: $base-size $base-margin;
+  margin-top: $base-margin;
+}
+
+.textField {
+  width: 120px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.select {
+  min-width: 120px;
+}
+
+.addbtn {
+  margin-bottom: $base-margin;
 }

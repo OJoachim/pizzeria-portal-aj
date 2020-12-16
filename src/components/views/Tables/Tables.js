@@ -61,7 +61,7 @@ const eventContent = [
   { time: '22:00', table1: null, table2: 239, table3: 128 },
 ];
 
-const Tables = () => {
+const Tables = (tableId) => {
   
   let day = new Date();
   let today = day.toISOString().substr(0,10);
@@ -215,6 +215,7 @@ const Tables = () => {
       </ButtonGroup>
     </Paper >
   );
+  
 };
 
 export default Tables;

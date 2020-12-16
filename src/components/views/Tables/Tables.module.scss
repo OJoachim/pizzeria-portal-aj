@@ -34,7 +34,8 @@
 .table {
   margin-top: $base-size;
   margin-bottom: $base-margin;
-  min-width: 700px;
+  width: auto;
+  max-width: 600px;
   .tablehead {
     background-color: $color-one;
     .title {

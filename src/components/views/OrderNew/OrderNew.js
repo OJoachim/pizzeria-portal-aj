@@ -35,7 +35,7 @@ const OrderNew = () => {
   };
 
   const [state, setState] = React.useState(
-    { cheese: false, cucumber: false, tomato: false, feta: false, mushrooms: false, oregano: false,  tomatoes: false, tomatosouse: false, salami: false,
+    { cheese: false, cucumber: false, tomatoes: false, feta: false, mushrooms: false, oregano: false, tomatosouse: false, salami: false,
     }
   );
 
@@ -46,7 +46,7 @@ const OrderNew = () => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
   
-  const { cheese, cucumber, tomato, tomatosouse, feta, mushrooms, oregano, tomatoes, salami } = state;
+  const { cheese, cucumber, tomatoes, tomatosouse, feta, mushrooms, oregano, salami } = state;
   
   return (
     <Paper className={styles.component}>
@@ -93,11 +93,7 @@ const OrderNew = () => {
                 label="Cheese"
               />
               <FormControlLabel
-                control={<Checkbox checked={mushrooms} onChange={handleChangePizza} name="mushrooms" />}
-                label="Mushrooms"
-              />
-              <FormControlLabel
-                control={<Checkbox checked={tomatosouse} onChange={handleChangePizza} name="tomato souse" />}
+                control={<Checkbox checked={tomatosouse} onChange={handleChangePizza} name="tomatosouse" />}
                 label="Tomato souse"
               />
               <FormControlLabel

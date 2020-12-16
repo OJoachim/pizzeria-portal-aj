@@ -17,18 +17,41 @@
   margin-top: $base-size;
 }
 
-.table {
-  margin-top: $base-size;
-  max-width: 400px;
-
-  .tablehead {
-    background-color: $color-one;
-    .title {
-      color: $color-two;
-    }
-  }
+.ordersub {
+  text-align: right;
+  margin-bottom: $small-margin;
+  font-size: 80%;
 }
 
-.fieldarea {
-  height: 40px;
+.grid {
+  margin: $base-margin;
+}
+
+.form {
+  border: 1px dotted $color-one;
+  border-radius: $base-size;
+  padding: $base-size $base-margin;
+  margin-top: $base-margin;
+}
+
+.textField {
+  width: 120px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.comment {
+  width: 250px;
+  height: 44px;
+  font-size: 80%;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.select {
+  min-width: 120px;
+}
+
+.addbtn {
+  margin-bottom: $base-margin;
 }

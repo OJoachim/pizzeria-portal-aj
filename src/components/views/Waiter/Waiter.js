@@ -17,10 +17,12 @@ class Waiter extends React.Component {
     fetchStatusUpdate: PropTypes.func,
     loading: PropTypes.shape({
       active: PropTypes.bool,
-      error: PropTypes.node,
+      error: PropTypes.oneOfType([PropTypes.bool,PropTypes.string]),
     }),
     tables: PropTypes.object,
+    statusUpdate: PropTypes.func,
   }
+  
   componentDidMount() {
     const { fetchTables } = this.props;
     fetchTables();

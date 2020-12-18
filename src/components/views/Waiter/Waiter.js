@@ -14,7 +14,7 @@ class Waiter extends React.Component {
 
   static propTypes = {
     fetchTables: PropTypes.func,
-    fetchStatusUpdate: PropTypes.func,
+    updateTableStatus: PropTypes.func,
     loading: PropTypes.shape({
       active: PropTypes.bool,
       error: PropTypes.oneOfType([PropTypes.bool,PropTypes.string]),
@@ -29,34 +29,33 @@ class Waiter extends React.Component {
   }
 
   renderActions(status, id) {
-    const { fetchStatusUpdate } = this.props;
+    const { updateTableStatus } = this.props;
     switch (status) {
       case 'free':
         return (
           <>
-            <Button onClick={() => fetchStatusUpdate(id, 'thinking')} component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`}>thinking</Button>
+            <Button onClick={() => updateTableStatus(id, 'thinking')}>thinking</Button>
           </>
         );
       case 'thinking':
         return (
-          <Button onClick={() => fetchStatusUpdate(id, 'new order')} component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>
-
+          <Button onClick={() => updateTableStatus(id, 'new order')} >new order</Button>
         );
-      case 'ordered':
+      case 'new order':
         return (
-          <Button onClick={() => fetchStatusUpdate(id, 'prepared')} component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/123`}>prepared</Button>
+          <Button onClick={() => updateTableStatus(id, 'prepared')}>prepared</Button>
         );
       case 'prepared':
         return (
-          <Button onClick={() => fetchStatusUpdate(id, 'delivered')} component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/567`}>delivered</Button>
+          <Button onClick={() => updateTableStatus(id, 'delivered')}>delivered</Button>
         );
       case 'delivered':
         return (
-          <Button onClick={() => fetchStatusUpdate(id, 'paid')} component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/567`}>paid</Button>
+          <Button onClick={() => updateTableStatus(id, 'paid')}>paid</Button>
         );
       case 'paid':
         return (
-          <Button onClick={() => fetchStatusUpdate(id, 'free')} component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/145`}>free</Button>
+          <Button onClick={() => updateTableStatus(id, 'free')}>free</Button>
         );
       default:
         return null;
@@ -65,10 +64,17 @@ class Waiter extends React.Component {
   render() {
     const { loading: { active, error }, tables } = this.props;
 
-    if (active || !tables.length) {
+    if (active) {
       return (
         <Paper className={styles.component}>
           <p>Loading...</p>
+        </Paper>
+      );
+    } else if (!tables.length) {
+      return (
+        <Paper className={styles.component}>
+          <p>No tables...</p>
+          <Button component={Link} exect to={`${process.env.PUBLIC_URL}/tables`} >see tables view</Button>
         </Paper>
       );
     } else if (error) {
@@ -107,7 +113,7 @@ class Waiter extends React.Component {
                     )}
                   </TableCell>
                   <TableCell>
-                    {this.renderActions(row.status)}
+                    {this.renderActions(row.status, row.id)}
                   </TableCell>
                 </TableRow>
               ))}
